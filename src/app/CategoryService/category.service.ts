@@ -12,6 +12,10 @@ export class CategoryService {
   categoryUrl = 'http://localhost:8080/categories';
 
   getCategories() {
-    return this.http.get<CategoryResponse>(this.categoryUrl);
+    return this.http.get<CategoryResponse[]>(this.categoryUrl);
+  }
+
+  getIconName(name: String) {
+    return `['fa', ${name}]`
   }
 }

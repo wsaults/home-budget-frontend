@@ -1,0 +1,24 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+li {
+  list-style-type: none; 
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  color: white;
+  font-size: 40px;
+}
+
+.category {
+  background-color: burlywood;
+}
+
+.bold {
+  font-weight: 600;
+}
