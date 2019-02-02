@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../../CategoryService/category.service';
+import { CategoryService } from '../../category-service/category.service';
 import { CategoryResponse } from '../../interfaces/category-response'
 
 @Component({
@@ -28,5 +28,9 @@ export class CategoriesComponent implements OnInit {
 
   getCategories() {
     return this.categories;
+  }
+
+  getIcon() {
+    return "faCoffee";
   }
 }

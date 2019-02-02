@@ -1,5 +1,5 @@
 <ul>
   <li ngClass="category" *ngFor="let category of getCategories()">
-    <fa-icon [icon]="['fa', 'coffee']"></fa-icon> {{category.name}}: <span ngClass="bold">{{category.amount | currency }}</span> of <span ngClass="bold">{{category.max | currency }}</span>
+    <app-icon [iconName]="category.name" ></app-icon> {{category.name}}: <span ngClass="bold">{{category.amount | currency }}</span> of <span ngClass="bold">{{category.max | currency }}</span>
   </li>
 </ul>

@@ -15,7 +15,12 @@ export class CategoryService {
     return this.http.get<CategoryResponse[]>(this.categoryUrl);
   }
 
-  getIconName(name: String) {
-    return `['fa', ${name}]`
-  }
+  // getIconName() :HTMLElement {
+  //   var element = new HTMLElement;
+  //   var elem = document.createElement('fa-icon', { "icon": "['fa', 'coffee']"})
+  //   // <fa-icon [icon]="['fa', 'coffee']"></fa-icon>
+  //   return elem;
+  // }
 }
+
+// <fa-icon [icon]={{getIconName()}}></fa-icon>
