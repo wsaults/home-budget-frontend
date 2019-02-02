@@ -10,15 +10,36 @@ li {
   height: 80px;
   line-height: 80px;
   margin-bottom: 5px;
-  padding-left: 20px;
   color: white;
   font-size: 40px;
+  background-color: cadetblue;
 }
 
-.category {
-  background-color: burlywood;
+.bar {
+  height: 80px;
+  background-color: indianred;
+  width: 50%;
+}
+
+.percent {
+  width: 100%;
+  position: absolute;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .bold {
   font-weight: 600;
+}
+
+.amount {
+  flex: 2 auto;
+}
+
+app-icon {
+  flex: 1 auto;
 }

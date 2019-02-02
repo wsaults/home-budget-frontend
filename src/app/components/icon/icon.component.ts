@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { faGasPump, faUtensils, faShoppingBag, faHamburger, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons';
+import { faGasPump, faShoppingBasket, faShoppingBag, faUtensils, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon',
@@ -23,7 +23,7 @@ export class IconComponent implements OnInit {
         break;
       }
       case "Groceries": {
-        this.icon = faUtensils;
+        this.icon = faShoppingBasket;
         break;
       }
       case "Shopping": {
@@ -31,7 +31,7 @@ export class IconComponent implements OnInit {
         break;
       }
       case "Restaurant": {
-        this.icon = faHamburger;
+        this.icon = faUtensils;
         break;
       }
       case "Health": {

@@ -1,5 +1,12 @@
 <ul>
-  <li ngClass="category" *ngFor="let category of getCategories()">
-    <app-icon [iconName]="category.name" ></app-icon> {{category.name}}: <span ngClass="bold">{{category.amount | currency }}</span> of <span ngClass="bold">{{category.max | currency }}</span>
+  <li *ngFor="let category of getCategories()">
+      <div ngClass="percent">
+        <div ngClass="content">
+            <app-icon [iconName]="category.name"></app-icon>
+            <div ngClass="bold amount">{{category.amount | currency }}</div>
+            <div ngClass="amount">{{category.max | currency }}</div>
+        </div>
+      </div>
+      <div ngClass="bar" [style.width.%]="(category.amount / category.max) * 100"></div>
   </li>
 </ul>
