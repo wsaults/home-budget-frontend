@@ -8,6 +8,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class AppComponent {
+
   title = 'home-budget-fe';
   faCoffee = faCoffee;
 

@@ -1,3 +1,7 @@
+app-icon {
+  flex: 1 auto;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -40,6 +44,7 @@ li {
   flex: 2 auto;
 }
 
-app-icon {
-  flex: 1 auto;
+.plusIcon {
+  position: absolute;
+  right: 35px;
 }

@@ -6,17 +6,27 @@ import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconComponent } from './components/icon/icon.component';
+import { AddExpenseComponent } from './components/add-expense/add-expense.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: "", redirectTo: "/", pathMatch: "full" },
+  { path: "add-expense/:name", component: AddExpenseComponent },
+  { path: "**", redirectTo: "/" }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
-    IconComponent
+    IconComponent,
+    AddExpenseComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule.forRoot(routes, { useHash: false })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../category-service/category.service';
 import { CategoryResponse } from '../../interfaces/category-response'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -9,8 +11,14 @@ import { CategoryResponse } from '../../interfaces/category-response'
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(categoryService: CategoryService) {
+  faPlusCircle = faPlusCircle;
+  router: Router;
+  route: ActivatedRoute;
+  showAddCategory: boolean;
+
+  constructor(categoryService: CategoryService, router: Router, route: ActivatedRoute) {
     this.categoryService = categoryService;
+    this.router = router;
    }
 
   categories: CategoryResponse[];
@@ -32,5 +40,10 @@ export class CategoriesComponent implements OnInit {
 
   getIcon() {
     return "faCoffee";
+  }
+
+  addExpense(name: String) {
+    this.showAddCategory = true;
+    // this.router.navigate([`add-expense/${name}`], { relativeTo: this.route });
   }
 }
