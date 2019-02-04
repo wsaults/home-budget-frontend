@@ -1,0 +1,9 @@
+---
+applications:
+- name: Budget-Frontend
+  memory: 1G
+  timeout: 180
+  instances: 1
+  random-route: true
+  buildpacks: 
+    - https://github.com/cloudfoundry/nodejs-buildpack
