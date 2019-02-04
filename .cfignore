@@ -1,0 +1,7 @@
+node_modules/.cache/uglifyjs-webpack-plugin/
+README.md
+.github/
+.git/
+.gitignore
+.idea/
+.editorconfig
