@@ -5,7 +5,7 @@
             <app-icon [iconName]="category.name"></app-icon>
             <div ngClass="bold amount">{{category.amount | currency }}</div>
             <div ngClass="amount">{{category.max | currency }}</div>
-            <a ngClass="btn" (click)="addExpense(category.name)"><fa-icon [icon]="faPlusCircle" ngClass="plusIcon"></fa-icon></a>
+            <a ngClass="btn" (click)="addExpense(category)"><fa-icon [icon]="faPlusCircle" ngClass="plusIcon"></fa-icon></a>
         </div>
       </div>
       <div ngClass="bar" [style.width.%]="(category.amount / category.max) * 100"></div>

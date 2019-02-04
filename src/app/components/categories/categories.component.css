@@ -17,12 +17,14 @@ li {
   color: white;
   font-size: 40px;
   background-color: cadetblue;
+  border-radius: 5px;
 }
 
 .bar {
   height: 80px;
   background-color: indianred;
   width: 50%;
+  border-radius: 5px;
 }
 
 .percent {

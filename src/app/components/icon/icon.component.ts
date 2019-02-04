@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { faGasPump, faShoppingBasket, faShoppingBag, faUtensils, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons';
+import { faGasPump, faShoppingBasket, faShoppingBag, faUtensils, faBriefcaseMedical, faPills } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon',
@@ -36,6 +36,10 @@ export class IconComponent implements OnInit {
       }
       case "Health": {
         this.icon = faBriefcaseMedical;
+        break;
+      }
+      case "Vitamins": {
+        this.icon = faPills;
         break;
       }
     }

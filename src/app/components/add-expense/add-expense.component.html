@@ -1,3 +1,9 @@
-<p>
-  add-expense works!
-</p>
+<div ngClass="container" *ngIf="isVisible">
+  <div ngClass="header">
+      <h2>Add Expense for: <span>{{category.name}}</span></h2>
+      <a ngClass="close" (click)="close()">Close</a>
+  </div>
+  
+  <input type="number" (keyup)="valueChange(expenseInput.value)" #expenseInput />
+  <a ngClass="btn" (click)="save()">Save</a>
+</div>

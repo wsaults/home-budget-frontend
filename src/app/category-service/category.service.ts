@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CategoryResponse } from '../interfaces/category-response';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,18 +10,21 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  categoryUrl = 'http://localhost:8080/categories';
+  baseUrl = environment.baseUrl;
+  categoriesUrl = this.baseUrl + 'categories';
+  categoryUrl = this.baseUrl + 'category/';
 
   getCategories() {
-    return this.http.get<CategoryResponse[]>(this.categoryUrl);
+    return this.http.get<CategoryResponse[]>(this.categoriesUrl);
   }
 
-  // getIconName() :HTMLElement {
-  //   var element = new HTMLElement;
-  //   var elem = document.createElement('fa-icon', { "icon": "['fa', 'coffee']"})
-  //   // <fa-icon [icon]="['fa', 'coffee']"></fa-icon>
-  //   return elem;
-  // }
-}
+  addCategoryExpense(amount: String, id: Number) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+      })
+    };
 
-// <fa-icon [icon]={{getIconName()}}></fa-icon>
+    return this.http.post<CategoryResponse>(this.categoryUrl + id.toString() + '/addExpense/' + amount, httpOptions);
+  }
+}

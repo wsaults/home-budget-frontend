@@ -11,7 +11,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: "", redirectTo: "/", pathMatch: "full" },
-  { path: "add-expense/:name", component: AddExpenseComponent },
   { path: "**", redirectTo: "/" }
 ];
 
@@ -26,8 +25,9 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
-    RouterModule.forRoot(routes, { useHash: false })
+    RouterModule.forRoot(routes, { useHash: false, onSameUrlNavigation: 'reload' })
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

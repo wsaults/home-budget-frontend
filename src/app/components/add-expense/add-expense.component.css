@@ -1,0 +1,55 @@
+h2 {
+  font-weight: 200;
+}
+
+input {
+  height: 80px;
+  width: 90%;
+  font-size: 60px;
+  text-align: center;
+}
+
+span {
+  font-weight: 600;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  background-color: blanchedalmond;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.close {
+  right: 10px;
+  background-color: gainsboro;
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  padding-top: 8px;
+  margin-top: 15px;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 90%;
+  height: 50px;
+  background-color: gainsboro;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 8px 6px -6px black;
+}
