@@ -6,5 +6,5 @@ applications:
   timeout: 180
   instances: 1
   random-route: true
-  buildpacks: 
-    - https://github.com/cloudfoundry/nodejs-buildpack
+  buildpack: staticfile_buildpack
+    # - https://github.com/cloudfoundry/nodejs-buildpack
