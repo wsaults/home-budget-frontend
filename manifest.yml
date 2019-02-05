@@ -1,8 +1,8 @@
 ---
 applications:
 - name: Budget-Frontend
-  memory: 1G
-  disk_quota: 1G
+  memory: 512MB
+  disk_quota: 256MB
   timeout: 180
   instances: 1
   random-route: true

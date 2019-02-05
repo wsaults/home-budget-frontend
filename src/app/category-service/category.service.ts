@@ -15,25 +15,14 @@ export class CategoryService {
   categoryUrl = this.baseUrl + 'category/';
 
   getCategories() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'GET',
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-
-    return this.http.get<CategoryResponse[]>(this.categoriesUrl, httpOptions);
+    return this.http.get<CategoryResponse[]>(this.categoriesUrl);
   }
 
   addCategoryExpense(amount: String, id: Number) {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'POST',
-        'Access-Control-Allow-Origin': '*'
+        // 'Content-Type':  'application/json',
+        // 'Accept': 'application/json',
       })
     };
 
